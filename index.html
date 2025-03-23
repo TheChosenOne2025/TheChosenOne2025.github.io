@@ -3,7 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yiming Wang's Horror Gaming World</title>
+    <title>Yiming Wang - Roblox Horror Games | Dandy's World & Scary Sushi Fan</title>
+    <meta name="description" content="Explore Yiming Wang's world of Roblox horror gaming, featuring Dandy's World and Scary Sushi. Join rip_mewtwo for spooky adventures and space exploration insights.">
+    <meta name="keywords" content="Yiming Wang, Roblox, horror games, Dandy's World, Scary Sushi, rip_mewtwo, space exploration">
+    <meta name="author" content="Yiming Wang">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thechoseone2025.github.io/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="cursor-options.js" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@300;400;700&display=swap" as="style">
+    <meta http-equiv="Cache-control" content="public, max-age=31536000">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Yiming Wang - Roblox Horror Gaming World">
+    <meta property="og:description" content="Join Yiming Wang (rip_mewtwo) on a journey through Roblox horror games like Dandy's World and Scary Sushi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thechoseone2025.github.io/">
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,10 +35,17 @@
                 <h1>Yiming Wang</h1>
                 <p class="tagline">Roblox Horror Game Enthusiast & Space Explorer</p>
             </div>
+            <nav aria-label="Main navigation">
+                <ul class="main-nav">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main>
-            <section class="about">
+            <section id="about" class="about">
                 <h2>About Me</h2>
                 <div class="about-content">
                     <div class="bio">
@@ -31,43 +57,43 @@
                 </div>
             </section>
 
-            <section class="gaming">
+            <section id="games" class="gaming">
                 <h2>My Favorite Horror Games</h2>
                 <div class="game-cards">
-                    <div class="game-card" data-game="dandys-world">
-                        <div class="game-image dandys-world"></div>
+                    <article class="game-card" data-game="dandys-world">
+                        <div class="game-image dandys-world" role="img" aria-label="Dandy's World game screenshot showing the creepy amusement park"></div>
                         <h3>Dandy's World</h3>
                         <p>Survive the creepy amusement park if you dare!</p>
-                    </div>
-                    <div class="game-card" data-game="scary-sushi">
-                        <div class="game-image scary-sushi"></div>
+                    </article>
+                    <article class="game-card" data-game="scary-sushi">
+                        <div class="game-image scary-sushi" role="img" aria-label="Scary Sushi game screenshot showing the horror-themed sushi restaurant"></div>
                         <h3>Scary Sushi</h3>
                         <p>Where delicious food turns into your worst nightmare!</p>
-                    </div>
+                    </article>
                     
                 </div>
             </section>
 
             
-            <section class="interests">
+            <section id="interests" class="interests">
                 <h2>My Other Interests</h2>
                 <div class="interest-grid">
-                    <div class="interest-card space">
+                    <article class="interest-card space">
                         <h3>Space Exploration</h3>
                         <p>I've visited Kennedy Space Center multiple times and love learning about Apollo missions!</p>
-                    </div>
-                    <div class="interest-card math">
+                    </article>
+                    <article class="interest-card math">
                         <h3>Math & Science</h3>
                         <p>Solving problems and discovering how the world works is exciting!</p>
-                    </div>
-                    <div class="interest-card engineering">
+                    </article>
+                    <article class="interest-card engineering">
                         <h3>Engineering</h3>
                         <p>Building and designing new things is one of my favorite activities.</p>
-                    </div>
-                    <div class="interest-card design">
+                    </article>
+                    <article class="interest-card design">
                         <h3>Creative Design</h3>
                         <p>I enjoy making digital art and designs using Canva.</p>
-                    </div>
+                    </article>
                 </div>
             </section>
         </main>
@@ -89,7 +115,7 @@
     <!-- Game Info Modals -->
     <div id="dandys-world-modal" class="game-modal">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <button class="modal-close" aria-label="Close modal">&times;</button>
             <div class="modal-header">
                 <h3>Dandy's World</h3>
             </div>
@@ -108,7 +134,7 @@
 
     <div id="scary-sushi-modal" class="game-modal">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <button class="modal-close" aria-label="Close modal">&times;</button>
             <div class="modal-header">
                 <h3>Scary Sushi</h3>
             </div>
@@ -124,6 +150,28 @@
             </ul>
         </div>
     </div>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "headline": "Yiming Wang's Horror Gaming World",
+      "author": {
+        "@type": "Person",
+        "name": "Yiming Wang",
+        "knowsAbout": ["Roblox", "Horror Games", "Space Exploration", "Dandy's World", "Scary Sushi"]
+      },
+      "specialty": ["Roblox Horror Games", "Space Exploration"],
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Yiming Wang",
+        "alternateName": "rip_mewtwo",
+        "description": "2nd grader and Roblox horror game enthusiast with a passion for space exploration",
+        "knowsAbout": ["Roblox", "Horror Games", "Space Exploration", "Dandy's World", "Scary Sushi"]
+      }
+    }
+    </script>
 
     <!-- JavaScript for interactive effects -->
     <script src="script.js"></script>
