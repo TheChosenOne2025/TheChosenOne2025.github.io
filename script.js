@@ -62,9 +62,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Add event listeners to game cards for sound effects
+    // Game Info Modals
     const gameCards = document.querySelectorAll('.game-card');
+    const modals = document.querySelectorAll('.game-modal');
+    const closeButtons = document.querySelectorAll('.modal-close');
+    
+    // Open modal when clicking on game card
     gameCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const gameType = this.getAttribute('data-game');
+            const modal = document.getElementById(`${gameType}-modal`);
+            if (modal) {
+                modal.classList.add('active');
+                playRandomSound(); // Add spooky sound when opening modal
+                
+                // Prevent body scrolling when modal is open
+                document.body.style.overflow = 'hidden';
+            }
+        });
+        
         card.addEventListener('mouseenter', function() {
             // Tilt effect on hover
             this.style.transform = `translateY(-10px) rotate(${Math.random() * 4 - 2}deg)`;
@@ -84,6 +100,44 @@ document.addEventListener('DOMContentLoaded', function() {
             cursor.classList.remove('cursor-grow');
             glow.classList.remove('cursor-grow');
         });
+    });
+    
+    // Close modal when clicking close button
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = this.closest('.game-modal');
+            if (modal) {
+                modal.classList.remove('active');
+                
+                // Re-enable body scrolling
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+    
+    // Close modal when clicking outside content
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            // Only close if clicking directly on the modal background (not on content)
+            if (e.target === this) {
+                this.classList.remove('active');
+                
+                // Re-enable body scrolling
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            modals.forEach(modal => {
+                modal.classList.remove('active');
+            });
+            
+            // Re-enable body scrolling
+            document.body.style.overflow = 'auto';
+        }
     });
     
     // Add cursor effects for clickable elements
